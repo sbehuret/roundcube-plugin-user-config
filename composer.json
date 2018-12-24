@@ -1,0 +1,25 @@
+{
+    "name": "sbehuret/user_config",
+    "type": "roundcube-plugin",
+    "description": "Roundcube plugin that loads user-specific configuration.",
+    "homepage": "https://github.com/sbehuret/roundcube-plugin-user-config",
+    "license": "GPLv3+",
+    "version": "1.0",
+    "authors": [
+        {
+            "name": "Sébastien Béhuret",
+            "email": "sebastien@behuret.net",
+	    "homepage": "https://sebastien.behuret.net/",
+            "role": "Author"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://plugins.roundcube.net"
+        }
+    ],
+    "require": {
+        "roundcube/plugin-installer": ">=0.1.6"
+    }
+}

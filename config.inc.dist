@@ -1,0 +1,7 @@
+<?php
+
+// User config includes:
+// false: disable user config includes
+// true: guess user config filenames
+// array: map usernames to user config filenames
+$config['user_config_includes'] = true;
