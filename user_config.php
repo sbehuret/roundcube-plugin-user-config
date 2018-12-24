@@ -20,7 +20,7 @@ class user_config extends rcube_plugin
         $user_config_includes = $rcmail->config->get('user_config_includes', false);
 
         if (!is_bool($user_config_includes) && !is_array($user_config_includes)) {
-            $rcmail->write_log('errors', 'Setting user_config_includes must be a boolean or an array of logins to configuration filenames');
+            $rcmail->write_log('errors', 'Setting user_config_includes must be a boolean or an array of usernames to configuration filenames');
             return;
         }
 
