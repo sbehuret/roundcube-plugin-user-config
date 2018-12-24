@@ -17,7 +17,7 @@ class user_config extends rcube_plugin
     {
         $rcmail = rcube::get_instance();
 
-	$user_config_includes = $rcmail->config->get('user_config_includes', false);
+        $user_config_includes = $rcmail->config->get('user_config_includes', false);
 
         if (!is_bool($user_config_includes) && !is_array($user_config_includes)) {
             $rcmail->write_log('errors', 'Setting user_config_includes must be a boolean or an array of logins to configuration filenames');
@@ -27,17 +27,17 @@ class user_config extends rcube_plugin
         if ($user_config_includes === false)
             return;
 
-	if (!$rcmail->user || !$rcmail->user->ID)
+        if (!$rcmail->user || !$rcmail->user->ID)
             return;
 
         $username = $rcmail->user->data['username'];
 
-	$filename = null;
+        $filename = null;
 
-	if (is_array($user_config_includes)) {
+        if (is_array($user_config_includes)) {
             if (array_key_exists($username, $user_config_includes))
                 $filename = $user_config_includes[$username];
-	} else
+        } else
             $filename = preg_replace('/[^a-z0-9\.\-_@]/i', '', $username) . '.inc.php';
 
         $plugins_before = $rcmail->config->get('plugins', array());
