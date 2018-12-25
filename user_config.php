@@ -7,7 +7,7 @@
  *
  * https://github.com/sbehuret/roundcube-plugin-user-config
  *
- * @version 1.0
+ * @version 1.1
  * @author Sébastien Béhuret <sebastien@behuret.net>
  */
 
