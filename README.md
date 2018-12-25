@@ -1,2 +1,4 @@
 Roundcube plugin: user\_config
 ==============================
+
+This plugin enables user-specific configuration files, which is analogous to Roundcube host-specific configuration through built-in setting 'include\_host\_config' (an example on how to use this feature is described at https://github.com/roundcube/roundcubemail/wiki/Configuration:-Multi-Domain-Setup). Configuration files will be loaded from the global configuration directory. See user\_login plugin example configuration (config.inc.dist) for more details. This plugin can be used to enable new plugins (in addition to those enabled in the main configuration) on a per-user basis, however it will not be possible to disable plugins from the main configuration as they will already be loaded at the time of loading user-specific configuration files.
