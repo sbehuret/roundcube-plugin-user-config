@@ -40,14 +40,15 @@ class user_config extends rcube_plugin
         } else
             $filename = preg_replace('/[^a-z0-9\.\-_@]/i', '', $username) . '.inc.php';
 
-        $plugins_before = $rcmail->config->get('plugins', array());
+        if ($filename) {
+            $plugins_before = $rcmail->config->get('plugins', array());
 
-        if ($filename)
             $rcmail->config->load_from_file($filename);
 
-        $plugins_after = $rcmail->config->get('plugins', array());
+            $plugins_after = $rcmail->config->get('plugins', array());
 
-        foreach (array_unique(array_values(array_diff($plugins_after, $plugins_before))) as $plugin)
-            $rcmail->plugins->load_plugin($plugin);
+            foreach (array_unique(array_values(array_diff($plugins_after, $plugins_before))) as $plugin)
+                $rcmail->plugins->load_plugin($plugin);
+        }
     }
 }
