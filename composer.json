@@ -4,7 +4,7 @@
     "description": "Roundcube plugin that loads user-specific configuration.",
     "keywords": ["user","config","configuration","file","include","multi","domain","setup"],
     "homepage": "https://github.com/sbehuret/roundcube-plugin-user-config",
-    "license": "GPLv3+",
+    "license": "GPL-3.0-or-later",
     "version": "1.3",
     "authors": [
         {
