@@ -7,7 +7,7 @@
  *
  * https://github.com/sbehuret/roundcube-plugin-user-config
  *
- * @version 1.1
+ * @version 1.3
  * @author Sébastien Béhuret <sebastien@behuret.net>
  */
 
@@ -41,11 +41,11 @@ class user_config extends rcube_plugin
             $filename = preg_replace('/[^a-z0-9\.\-_@]/i', '', $username) . '.inc.php';
 
         if ($filename) {
-            $plugins_before = $rcmail->config->get('plugins', array());
+            $plugins_before = $rcmail->config->get('plugins', []);
 
             $rcmail->config->load_from_file($filename);
 
-            $plugins_after = $rcmail->config->get('plugins', array());
+            $plugins_after = $rcmail->config->get('plugins', []);
 
             foreach (array_unique(array_values(array_diff($plugins_after, $plugins_before))) as $plugin)
                 $rcmail->plugins->load_plugin($plugin);
