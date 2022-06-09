@@ -15,6 +15,8 @@ class user_config extends rcube_plugin
 {
     public function init()
     {
+        rcube_plugin::load_config();
+
         $rcmail = rcube::get_instance();
 
         $user_config_includes = $rcmail->config->get('user_config_includes', false);
