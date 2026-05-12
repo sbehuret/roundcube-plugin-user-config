@@ -1,5 +1,7 @@
 <?php
 
+$config = [];
+
 // User config includes:
 // false: disable user config includes
 // true: guess user config filenames
